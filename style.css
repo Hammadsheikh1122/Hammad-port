@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: monospace;
+    color: orangered;
+}
+.prent{
+    display: flex;
+    justify-content: space-around;
+    background: #000;
+    color: orangered;
+    height: 50px;
+    align-items: center;
+    
+}
+.link a {
+    text-decoration: none;
+    padding: 10px 10px;
+    color: orangered;
+    animation-name: mytransition; 
+    animation-duration: 10s;
+    animation-iteration-count: infinite; 
+}
+span{
+    color: white;
+}
+.prent i{
+    color: white;
+    display: none;
+    cursor: pointer;
+}
+h1{transition: 5sec;
+    
+}
+
+@media(max-width: 600px){
+    .prent{
+        justify-content: space-between;
+        padding: 0px 20px;
+    }
+    .link{
+        display: none;
+
+    }
+    .prent i{
+         display: block; 
+    }
+    .cards{
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+    }
+}
+h1 {
+    animation-name: mytransition; 
+    animation-duration: 10s;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes mytransition {
+    0% { color: orangered; }
+    50% { color: white; }
+    100% { color: orangered; } 
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    width: 100%;
+    background: #000;
+    color: orangered;
+    align-items: center;
+    text-align: center;
+    border: solid white 2px;
+}
+.hero img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+
+}
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: black;
+    color: orangered;
+    height: 250px;
+    width: 100%px;
+    align-items: center;
+}
+.box{
+    text-align: center;
+    box-shadow: 10px 10px 10px orangered;
+    height: 150px;
+    width: 300px;
+    gap: 20px;
+}
+.cards img{
+    height: 80px;
+    width: 80px;
+    padding: 10px;
+}
+.footer{
+    background: #000;
+    color: aliceblue;
+    text-align: center;
+    border: solid 2px white ;
+    height: 50px;
+    padding:10px
+}
