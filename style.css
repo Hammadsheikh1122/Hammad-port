@@ -1,117 +1,107 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: monospace;
     color: orangered;
+    background: #000;
 }
-.prent{
+
+.prent {
     display: flex;
     justify-content: space-around;
     background: #000;
-    color: orangered;
-    height: 50px;
+    height: 60px;
     align-items: center;
-    
+    padding: 0 20px;
 }
+
 .link a {
     text-decoration: none;
-    padding: 10px 10px;
+    padding: 10px;
     color: orangered;
-    animation-name: mytransition; 
-    animation-duration: 10s;
-    animation-iteration-count: infinite; 
+    animation: mytransition 10s infinite;
 }
-span{
-    color: white;
-}
-.prent i{
+
+.prent i {
     color: white;
     display: none;
     cursor: pointer;
 }
-h1{transition: 5sec;
-    
-}
 
-@media(max-width: 600px){
-    .prent{
-        justify-content: space-between;
-        padding: 0px 20px;
-    }
-    .link{
-        display: none;
-
-    }
-    .prent i{
-         display: block; 
-    }
-    .cards{
-        flex-direction: column;
-        padding: 10px;
-        height: auto;
-    }
-}
-h1 {
-    animation-name: mytransition; 
-    animation-duration: 10s;
-    animation-iteration-count: infinite; 
-}
-
-@keyframes mytransition {
-    0% { color: orangered; }
-    50% { color: white; }
-    100% { color: orangered; } 
-}
-.hero{
+.hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center; 
     height: 400px;
     width: 100%;
-    background: #000;
-    color: orangered;
-    align-items: center;
-    text-align: center;
-    border: solid white 2px;
+    text-align: center; 
 }
-.hero img{
+
+.hero img {
     border-radius: 50%;
     height: 200px;
     width: 200px;
-    padding: 10px;
-
+    margin-bottom: 15px;
 }
+
 .cards {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap; 
     justify-content: center;
-    flex-wrap: wrap;
+    gap: 20px; 
+    padding: 20px;
     background: black;
-    color: orangered;
-    height: 250px;
-    width: 100%px;
-    align-items: center;
+    width: 100%;
 }
-.box{
+
+.box {
     text-align: center;
-    box-shadow: 10px 10px 10px orangered;
-    height: 150px;
+    box-shadow: 10px 10px 0px orangered;
+    border-radius: 20px;
+    height: 150px; 
     width: 300px;
-    gap: 20px;
-}
-.cards img{
-    height: 80px;
-    width: 80px;
     padding: 10px;
+    border: 1px solid orangered;
 }
-.footer{
-    background: #000;
-    color: aliceblue;
-    text-align: center;
-    border: solid 2px white ;
+.box img{
     height: 50px;
-    padding:10px
+    width: 50px;
+
+}
+
+.footer { 
+    background: white;
+    color: #000; 
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+p, h1, .link a {
+    animation: mytransition 10s infinite;
+}
+
+@keyframes mytransition {
+    0%, 100% { color: orangered; }
+    50% { color: white; }
+}
+
+@media (max-width: 600px) {
+    .prent {
+        justify-content: space-between;
+    }
+    .link {
+        display: none;
+    }
+    .prent i {
+        display: block; 
+    }
+    .box {
+        width: 90%; 
+    }
 }
